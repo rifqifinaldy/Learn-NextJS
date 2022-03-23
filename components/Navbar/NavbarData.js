@@ -8,7 +8,11 @@ export const menus = [
         name : 'About',
     },
     {
-        target : 'User',
-        name : 'User List',
+        target : '/fosil',
+        name : 'Fosil',
+    },
+    {
+        target : '/paleontolog',
+        name : 'Paleontolog',
     }
 ];

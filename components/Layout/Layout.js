@@ -5,11 +5,11 @@ import Navbar from "../Navbar/Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <Container>
+    <>
       <Navbar />
       {children}
       <Footer />
-    </Container>
+    </>
   );
 };
 

@@ -2,37 +2,41 @@ import React from "react";
 import Head from "next/head";
 import Card from "../components/Card/Card";
 import MyCard from "../components/Card/Card";
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
+import PageTitle from "../components/PageTitle/PageTitle";
 
 const About = () => {
   return (
-    <>
-      <Head>
-        <title>TESTING LIST | About</title>
-        <meta name="keywords" content="Hello" />
-      </Head>
-      <div>
-        <h1>about</h1>
+    <Container>
+      <PageTitle 
+        title="About"
+        subtitle="About this Project"
+      />
         <MyCard
           title="Card Title"
           body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
           doloremque a vero"
           action= {<Button>Read More</Button>}
         />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-          doloremque a vero, atque quas explicabo consequuntur quae eos?
-          Nesciunt maxime asperiores possimus sunt cum quidem cumque odio dolore
-          natus voluptates.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-          doloremque a vero, atque quas explicabo consequuntur quae eos?
-          Nesciunt maxime asperiores possimus sunt cum quidem cumque odio dolore
-          natus voluptates.
-        </p>
-      </div>
-    </>
+        <Button color="primary" variant="contained">
+          Primary
+        </Button>
+        <Button color="secondary" variant="contained">
+          Secondary
+        </Button>
+        <Button color="error" variant="contained">
+          Error
+        </Button>
+        <Button color="warning" variant="contained">
+          Warning
+        </Button>
+        <Button color="info" variant="contained">
+          Info
+        </Button>
+        <Button color="success" variant="contained">
+          Success
+        </Button>
+    </Container>
   );
 };
 

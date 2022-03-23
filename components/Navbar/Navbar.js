@@ -8,8 +8,8 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import { Box } from "@mui/material";
+import VolcanoIcon from '@mui/icons-material/Volcano';
+import { Box, Container } from "@mui/material";
 import { menus } from "./NavbarData";
 import Link from "next/link";
 
@@ -36,32 +36,32 @@ export default function HideAppBar(props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar>
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div">
-              Coming Soon
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+        <AppBar color="secondary">
+          <Container>
+            <Toolbar>
+              <IconButton
+                size="large"
+                edge="start"
+                color="dark"
+                aria-label="menu"
+                sx={{ mr: 1 }}
+              >
+                <VolcanoIcon fontSize="large"/>
+              </IconButton>
+              <Typography color="whitesmoke" variant="h5" component="div" sx={{ flexGrow: 1 }}>
+                Pre-History
+              </Typography>
               {menus.map((menu) => (
                 <Link
-                href={menu.target}
+                  href={menu.target}
                   key={menu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, display: "block" }}
                 >
-                  <a>{menu.name}</a>
+                  <Button color="info">{menu.name}</Button>
                 </Link>
               ))}
-            </Box>
-          </Toolbar>
+            </Toolbar>
+          </Container>
         </AppBar>
       </HideOnScroll>
       <Toolbar />
