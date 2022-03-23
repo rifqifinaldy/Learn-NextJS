@@ -21,23 +21,17 @@ export async function getStaticProps() {
   };
 }
 
-
-
 const index = ({ dino }) => {
-  console.log(dino);
   return (
     <Container sx={{ p: 2 }}>
-      <PageTitle 
-      title="Dinosaur Wiki" 
-      subtitle="Under Dev"
-      />
+      <PageTitle title="Dinosaur Wiki" subtitle="Under Dev" />
       <Grid container spacing={2}>
         {dino.map((dino, i) => {
           return (
             <Grid key={dino.sys.id} item xs={4}>
-              <MyCard 
-              title={dino.fields.title} 
-              action={<Button color="success" variant="outlined">Read More</Button>}
+              <MyCard
+                title={dino.fields.title}
+                body=""
               />
             </Grid>
           );
