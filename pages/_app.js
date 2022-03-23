@@ -8,12 +8,9 @@ import { theme } from "../styles/theme";
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Head>
-      <title>Fossilize</title>
-        <meta name="keywords" content="Fossilize" />
-      </Head>
+      
       <Layout>
-        <Component {...pageProps} />
+        <Component {...pageProps}/>
       </Layout>
     </ThemeProvider>
   );

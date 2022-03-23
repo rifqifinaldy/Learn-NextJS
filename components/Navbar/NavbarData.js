@@ -8,8 +8,8 @@ export const menus = [
         name : 'About',
     },
     {
-        target : '/fosil',
-        name : 'Fosil',
+        target : '/dino',
+        name : 'Dino',
     },
     {
         target : '/paleontolog',

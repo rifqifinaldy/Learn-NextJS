@@ -49,12 +49,12 @@ export default function HideAppBar(props) {
                 <VolcanoIcon fontSize="large"/>
               </IconButton>
               <Typography color="whitesmoke" variant="h5" component="div" sx={{ flexGrow: 1 }}>
-                Pre-History
+              Pre-Storic
               </Typography>
               {menus.map((menu) => (
                 <Link
                   href={menu.target}
-                  key={menu}
+                  key={menu.name}
                   sx={{ my: 2, display: "block" }}
                 >
                   <Button color="info">{menu.name}</Button>

@@ -7,7 +7,7 @@ import { CardActionArea, CardActions } from "@mui/material";
 
 const MyCard = ({title, body, action}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card raised={true} sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -15,7 +15,7 @@ const MyCard = ({title, body, action}) => {
           image="/static/images/cards/contemplative-reptile.jpg"
           alt="green iguana"
         />
-        <CardContent>
+        <CardContent style={{backgroundColor: "red"}}>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
@@ -23,7 +23,7 @@ const MyCard = ({title, body, action}) => {
             {body}
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions style={{backgroundColor: "red"}}>
             {action}
         </CardActions>
       </CardActionArea>

@@ -22,7 +22,7 @@ export default function Home() {
         />
         <div className={classes.welcome}>
           <Typography variant="h1">
-            PRE-HISTORY
+            Pre-Storic
           </Typography>
           <Button color="success" variant="outlined">
             Explore Now

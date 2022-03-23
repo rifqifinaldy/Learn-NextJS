@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme) => ({
     top: '40%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    color: "#f7a072",
+    color: "#93c0a4",
     textShadow: '0.5px 1px #fefefe',
   },
 }));
