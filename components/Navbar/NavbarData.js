@@ -8,7 +8,7 @@ export const menus = [
         name : 'About',
     },
     {
-        target : 'list',
-        name : 'List',
+        target : 'User',
+        name : 'User List',
     }
 ];
