@@ -4,7 +4,7 @@ import MyCard from "../../components/Card/Card";
 import { Button, Container, Grid } from "@mui/material";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Link from "next/link";
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -30,15 +30,23 @@ const index = ({ dino }) => {
       <Grid container spacing={2}>
         {dino.map((dino, i) => {
           return (
-            <Grid key={dino.sys.id} item xs={4}>
+            <Grid key={dino.sys.id} item xs={12} sm={6} md={4}>
               <MyCard
                 title={dino.fields.title}
                 body={dino.fields.headline}
-                thumbnail={'https:'+ dino.fields.thumbnail.fields.file.url}
-                action=
-                {<Link href={`/dino/` + dino.fields.slug}>
-                  <Button startIcon={<VisibilityIcon />} size="small" color="primary" variant="contained">Read More</Button>
-                </Link>}
+                thumbnail={"https:" + dino.fields.thumbnail.fields.file.url}
+                action={
+                  <Link href={`/dino/` + dino.fields.slug}>
+                    <Button
+                      startIcon={<VisibilityIcon />}
+                      size="small"
+                      color="primary"
+                      variant="contained"
+                    >
+                      Read More
+                    </Button>
+                  </Link>
+                }
               />
             </Grid>
           );

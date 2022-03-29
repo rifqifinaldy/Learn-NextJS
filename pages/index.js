@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import PageTitle from "../components/PageTitle/PageTitle";
 import { useStyles } from "../styles/home-style";
+import Navbar from "../components/Navbar/Navbar"
 
 export default function Home() {
   const classes = useStyles();
   return (
     <div>
+      <Navbar />
       <div className={classes.banner}>
         <Image
           alt="Mountains"
@@ -27,10 +29,6 @@ export default function Home() {
           </Button>
         </div>
       </div>
-
-      <Container>
-        <PageTitle title={"Home"} subtitle={"Developed by : Rifqi Finaldy"} />
-      </Container>
     </div>
   );
 }

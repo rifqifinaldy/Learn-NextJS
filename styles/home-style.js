@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
   banner: {
     position: "relative",
     textAlign: "center",
-    height: "100vh",
+    height: "90vh",
     justifyContent: "center",
     alignItems:"center",
   },
