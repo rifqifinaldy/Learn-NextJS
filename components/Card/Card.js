@@ -13,7 +13,7 @@ const MyCard = ({ title, body, action, thumbnail, link }) => {
   return (
     <Card raised={true} sx={{ maxWidth: 345 }} color="primary" className={classes.card}>
       <CardMedia>
-        <Image src={thumbnail} layout="responsive" width={700} height={475} />
+        <Image src={thumbnail} layout="responsive" width={700} height={475} priority="lazy"/>
       </CardMedia>
       <CardContent>
         <Typography

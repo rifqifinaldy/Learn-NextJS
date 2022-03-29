@@ -36,7 +36,7 @@ const index = ({ dino }) => {
                 body={dino.fields.headline}
                 thumbnail={'https:'+ dino.fields.thumbnail.fields.file.url}
                 action=
-                {<Link href={`/dino/` + dino.fields.title}>
+                {<Link href={`/dino/` + dino.fields.slug}>
                   <Button startIcon={<VisibilityIcon />} size="small" color="primary" variant="contained">Read More</Button>
                 </Link>}
               />

@@ -2,7 +2,6 @@ import { Button, Container, Typography } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import MyCard from "../components/Card/Card";
 import PageTitle from "../components/PageTitle/PageTitle";
 import { useStyles } from "../styles/home-style";
 
@@ -17,6 +16,7 @@ export default function Home() {
           objectFit="cover"
           layout="fill"
           quality={100}
+          priority="lazy"
         />
         <div className={classes.welcome}>
           <Typography variant="h1">
