@@ -3,30 +3,24 @@ import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea, CardActions } from "@mui/material";
+import { CardActions } from "@mui/material";
+import Image from "next/image";
 
-const MyCard = ({title, body, action}) => {
+const MyCard = ({ title, body, action, thumbnail, link }) => {
   return (
     <Card raised={true} sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
-        />
-        <CardContent style={{backgroundColor: "red"}}>
-          <Typography gutterBottom variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {body}
-          </Typography>
-        </CardContent>
-        <CardActions style={{backgroundColor: "red"}}>
-            {action}
-        </CardActions>
-      </CardActionArea>
+      <CardMedia>
+        <Image src={thumbnail} layout="responsive" width={700} height={475} />
+      </CardMedia>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {body}
+        </Typography>
+      </CardContent>
+      <CardActions>{action}</CardActions>
     </Card>
   );
 };

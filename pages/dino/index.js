@@ -2,8 +2,8 @@ import React from "react";
 import { createClient } from "contentful";
 import MyCard from "../../components/Card/Card";
 import { Button, Container, Grid } from "@mui/material";
-import { Box } from "@mui/system";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -22,6 +22,7 @@ export async function getStaticProps() {
 }
 
 const index = ({ dino }) => {
+  console.log(dino);
   return (
     <Container sx={{ p: 2 }}>
       <PageTitle title="Dinosaur Wiki" subtitle="Under Dev" />
@@ -32,6 +33,11 @@ const index = ({ dino }) => {
               <MyCard
                 title={dino.fields.title}
                 body=""
+                thumbnail={'https:'+ dino.fields.thumbnail.fields.file.url}
+                action=
+                {<Link href={`/dino/` + dino.fields.title}>
+                  <Button color="success" variant="outlined">Read More</Button>
+                </Link>}
               />
             </Grid>
           );

@@ -16,8 +16,6 @@ export default function Home() {
           src="/images/banner/banner-image.jpg"
           objectFit="cover"
           layout="fill"
-          width={700}
-          height={300}
           quality={100}
         />
         <div className={classes.welcome}>
