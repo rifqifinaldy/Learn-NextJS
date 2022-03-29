@@ -37,7 +37,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { dino: items[0] },
-    revalidate: 10
+    revalidate: 1
   };
 }
 
