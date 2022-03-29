@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Box } from "@mui/system";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Link from "next/link";
+import LoadingPage from "../../components/Loading/LoadingPage";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -25,7 +26,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -35,13 +36,24 @@ export async function getStaticProps({ params }) {
     "fields.slug": params.slug,
   });
 
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/dino",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: { dino: items[0] },
-    revalidate: 10
+    revalidate: 10,
   };
 }
 
 const slug = ({ dino }) => {
+  if (!dino) return <LoadingPage />;
+
   const { featuredImage, title, kind, periode, description, headline } =
     dino.fields;
   return (
@@ -65,16 +77,24 @@ const slug = ({ dino }) => {
       <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
         {kind.map((tag, i) => {
           return (
-            <Typography key={i} mr={1} variant="caption" display="block" gutterBottom>
+            <Typography
+              key={i}
+              mr={1}
+              variant="caption"
+              display="block"
+              gutterBottom
+            >
               #{tag}
             </Typography>
           );
         })}
       </Box>
       <Box>{documentToReactComponents(description)}</Box>
-      <hr/>
+      <hr />
       <Link href="/dino">
-      <Button color="success" variant="outlined">View Other</Button>
+        <Button color="success" variant="outlined">
+          View Other
+        </Button>
       </Link>
     </Container>
   );
