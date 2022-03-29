@@ -14,13 +14,13 @@ const NotFound = () => {
       setTimeout(() => {
           router.push('/')
       }, 3000);
-    }, [])
+    }, [router])
     
 
   return (
     <div>
       <h1>OOOPS........</h1>
-      <h2>That Page Can't be found</h2>
+      <h2>That Page Can&apos;t be found</h2>
       <p>
         You will be redirected to the <Link href="/">Home Page</Link> in {counter}
       </p>
