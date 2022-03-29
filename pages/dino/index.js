@@ -24,7 +24,6 @@ export async function getStaticProps() {
 }
 
 const index = ({ dino }) => {
-  console.log(dino);
   return (
     <Container sx={{ p: 2 }}>
       <PageTitle title="Dinosaur Wiki" subtitle="Choose your favorite dinosaur" />

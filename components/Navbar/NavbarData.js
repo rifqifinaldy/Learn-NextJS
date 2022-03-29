@@ -11,8 +11,4 @@ export const menus = [
         target : '/dino',
         name : 'Dino',
     },
-    {
-        target : '/paleontolog',
-        name : 'Paleontolog',
-    }
 ];

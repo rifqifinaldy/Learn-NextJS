@@ -9,21 +9,18 @@ import "../styles/globals.css";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/Layout/Layout";
 
-// Client-side cache shared for the whole session
-// of the user in the browser.
-
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  const route = props.router.pathname;
-  // if ([`/`].includes(props.router.pathname))
-  //   return <Component {...pageProps} />;
-  console.log(route);
+  const route = props.router.pathname.substring(1);
+  const pageName = route.charAt(0).toUpperCase() + route.slice(1);
+  
   return (
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <title>Pre-Storic | {pageName === "" ? "Home" : pageName}</title>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
