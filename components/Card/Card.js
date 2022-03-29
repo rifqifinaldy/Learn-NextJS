@@ -11,9 +11,21 @@ const MyCard = ({ title, body, action, thumbnail, link }) => {
   const classes = useStyles();
 
   return (
-    <Card raised={true} sx={{ maxWidth: 345 }} color="primary" className={classes.card}>
+    <Card
+      raised={true}
+      sx={{ maxWidth: 345 }}
+      color="primary"
+      className={classes.card}
+    >
       <CardMedia>
-        <Image src={thumbnail} layout="responsive" width={700} height={475} priority="lazy"/>
+        <Image
+          src={thumbnail}
+          layout="responsive"
+          width={700}
+          height={475}
+          priority="lazy"
+          alt={title}
+        />
       </CardMedia>
       <CardContent>
         <Typography

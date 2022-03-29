@@ -36,10 +36,10 @@ const About = () => {
         So What&apos;s Pre-Storic about ?
       </p>
       <p>
-        Well, it&apos;s just simple wikipedia about extinct animal from mesozoic era ("Age of Reptiles") . Every source of this extinct animal i copied from wikipedia just to represent it&apos;s real fact about the subject.
+        Well, it&apos;s just simple wikipedia about extinct animal from mesozoic era (&quot;Age of Reptiles&quot;) . Every source of this extinct animal i copied from wikipedia just to represent it&apos;s real fact about the subject.
       </p>
       <p>
-        This Site we&apos;re It's also inspired by Jurrasic Park Wikipedia.
+        This Site we&apos;re It&apos;s also inspired by Jurrasic Park Wikipedia.
       </p>
     </Container>
   );

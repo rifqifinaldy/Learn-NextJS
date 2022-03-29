@@ -72,6 +72,7 @@ const slug = ({ dino }) => {
           priority="immediately"
           layout="fill"
           objectFit="contain"
+          alt={title}
         />
       </Box>
       <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
