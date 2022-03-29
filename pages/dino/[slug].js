@@ -64,7 +64,7 @@ const slug = ({ dino }) => {
       <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
         {kind.map((tag, i) => {
           return (
-            <Typography mr={1} variant="caption" display="block" gutterBottom>
+            <Typography key={i} mr={1} variant="caption" display="block" gutterBottom>
               #{tag}
             </Typography>
           );

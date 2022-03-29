@@ -26,7 +26,7 @@ const index = ({ dino }) => {
   console.log(dino);
   return (
     <Container sx={{ p: 2 }}>
-      <PageTitle title="Dinosaur Wiki" subtitle="Under Dev" />
+      <PageTitle title="Dinosaur Wiki" subtitle="Choose your favorite dinosaur" />
       <Grid container spacing={2}>
         {dino.map((dino, i) => {
           return (
